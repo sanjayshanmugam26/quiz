@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #FFEB3B;
+}
+
+.page1, .page2, .page3, .page5, .page6, .page8{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page1 h1 span{
+    color: #03A9F4;
+    font-size: 48px;
+    font-weight: 200;
+    padding: 10px;
+}
+
+.page1_btn button{
+    background-color: #03A9F4;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.page1_btn p, .page2_btn p{
+    margin: 10px 20px;
+}
+
+
+
+.page2 h1 span, .page3 h1 span, .page5 h1 span, .page6 h1 span{
+    color: #03A9F4;
+    font-weight: 200;
+    padding: 10px;
+}
+
+.page2 h4{
+    margin: 10px 40px;
+    color: #424242;
+}
+
+.page2 input{
+    margin: 10px 40px;
+    border: none;
+    background-color: #FFEB3B;
+    border-bottom: 1px solid #03A9F4;
+    width: 600px;
+    height: 50px;
+    padding: 10px;
+    font-size: 24px;
+    color: #03A9F4;
+}
+.page2 input:focus{
+    outline: none;
+}
+::placeholder{
+    font-size: 24px;
+    color: #03A9F4;
+}
+
+.page2_btn, .page1_btn, .page3_btn, .page5_btn, .page6_btn{
+    display: flex;
+    align-items: center;
+    margin: 10px 40px;
+}
+
+.page2_btn button, .page3_btn button, .page5_btn button, .page6_btn button{
+    background-color: #03A9F4;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.page2_btn p, .page1_btn p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page2_btn button span, .page2_btn p span, .page1_btn p span{
+    font-size: 18px;
+    padding: 0 5px;
+}
+.page3 h1, .page5 h1, .page6 h1{
+    font-weight: 400;
+}
+.page3 img{
+    padding: 20px 40px;
+}
+
+.grid_btn{
+    margin: 10px 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.grid_btn button{
+    border: 2px solid #03A9F4;
+    width: 350px;
+    height: 50px;
+    padding: 5px 10px;
+    background-color: #B3E5FC;
+    color: #03A9F4;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.btn_op{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background-color: #FFEB3B;
+    border: 1px solid #03A9F4;
+    border-radius: 5px;
+}
+
+.flex_btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 40px;
+}
+
+.flex_btn button{
+    border: 2px solid #03A9F4;
+    width: 250px;
+    height: 180px;
+    margin: 0 10px;
+    padding: 10px 10px;
+    background-color: #B3E5FC;
+    color: #03A9F4;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.flex_btn button .btn_op{
+    position: relative;
+    left: 90px;
+}
+
+.heart_btn{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 40px 40px;
+}
+
+.heart_btn button{
+    margin: 0 10px;
+    width: 80px;
+    height: 100px;
+    border: none;
+    background-color: #FFEB3B;
+    cursor: pointer;
+}
+
+.heart_btn button span{
+    font-size: 80px;
+    color: #03A9F4;
+}
+
+.heart_btn button p{
+    font-size: 18px;
+    color: #03A9F4;
+}
+
+.page7_btn{
+    margin: 10px 40px;
+}
+
+.page7_btn button{
+    background-color: #03A9F4;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.page8 h3{
+    text-align: center;
+    font-size: 22px;
+}
+
+.grid_btn button:hover, .flex_btn button:hover, .heart_btn button:hover{
+    scale: 1.1;
+}
+
+.page1_btn button:hover, .page2_btn button:hover, .page3_btn button:hover, .page5_btn button:hover, .page6_btn button:hover, .page7_btn button:hover{
+    box-shadow: 0px 0px 5px #29B6F6;
+}

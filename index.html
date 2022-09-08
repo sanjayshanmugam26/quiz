@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page1" id="page1">
+        <h1><span>"</span>  Okay, let's see what you've made of...</h1>
+        <div class="page1_btn">
+            <button onclick="changepage('page1','page2')">Give me what you've got</button>
+            <p>Press Enter<span class="material-icons">keyboard_return</span></p>
+        </div>
+    </div>
+
+    <div class="page2" style="display: none;" id="page2">
+        <h1><span>1.</span>What's your name challenger ? *</h1>
+        <h4>Just your first one is fine. Or a nickname.</h4>
+        <input type="text" name="name" id="name" placeholder="Type your answer here..." required>
+        <div class="page2_btn">
+            <button onclick="changepage('page2','page3');getname()">Ok<span class="material-icons">done</span></button>
+            <p>Press Enter<span class="material-icons">keyboard_return</span></p>
+        </div>
+    </div>
+
+    <div class="page3" style="display: none;" id="page3">
+        <h1><span>2.</span>Which famous con-artist's life is the flim <b>Catch Me If You Can</b> based on?</h1>
+        <img src="catchmeifyoucan.jpg" alt="Catch Me If You Can" width="480px" height="250px">
+        <div class="grid_btn">
+            <button><div class="btn_op">A</div> Gregor Macgregor</button>
+            <button><div class="btn_op">B</div>Charles Ponzi</button>
+            <button><div class="btn_op">C</div>Bernard Madoff</button>
+            <button onclick="scorecount(1)"><div class="btn_op">D</div>Frank Abagnale</button>
+        </div>
+        <div class="page3_btn">
+            <button onclick="changepage('page3','page4')">Ok<span class="material-icons">done</span></button>
+        </div>
+    </div>
+
+    <div class="page2" style="display: none;" id="page4">
+        <h1><span>3.</span>How many stars that the US flag have?</h1>
+        <input type="text" name="name" id="stars" placeholder="Type your answer here..." required>
+        <div class="page2_btn">
+            <button onclick="changepage('page4','page5'); checkans()">Ok<span class="material-icons">done</span></button>
+            <p>Press Enter<span class="material-icons">keyboard_return</span></p>
+        </div>
+    </div>
+
+    <div class="page5" style="display: none;" id="page5">
+        <h1><span>4.</span>Which of these is the <b>Albanian</b> flag?</h1>
+        <div class="flex_btn">
+            <button><img src="Andorra.png" alt=""><div class="btn_op">A</div></button>
+            <button onclick="scorecount(1)"><img src="Albania.png" alt=""><div class="btn_op">B</div></button>
+            <button><img src="India.png" alt=""><div class="btn_op">C</div></button>
+            <button><img src="Korea-South.png" alt=""><div class="btn_op">D</div></button>
+        </div>
+        <div class="page5_btn">
+            <button onclick="changepage('page5','page6')">Ok<span class="material-icons">done</span></button>
+        </div>
+    </div>
+
+    <div class="page6" style="display: none;" id="page6">
+        <h1><span>5.</span>How many heart does an <b>Octopus</b> have?</h1>
+        <div class="heart_btn">
+            <button><span class="material-icons">favorite_border</span><p>1</p></button>
+            <button><span class="material-icons">favorite_border</span><p>2</p></button>
+            <button onclick="scorecount(1)"><span class="material-icons">favorite_border</span><p>3</p></button>
+            <button><span class="material-icons">favorite_border</span><p>4</p></button>
+            <button><span class="material-icons">favorite_border</span><p>5</p></button>
+            <button><span class="material-icons">favorite_border</span><p>6</p></button>
+        </div>
+        <div class="page6_btn">
+            <button onclick="changepage('page6','page7')">Ok<span class="material-icons">done</span></button>
+        </div>
+    </div>
+
+    <div class="page5" style="display: none;" id="page7">
+        <h1><span>6.</span>Which of these is the <b>Indian</b> flag?</h1>
+        <div class="flex_btn">
+            <button><img src="Andorra.png" alt=""><div class="btn_op">A</div></button>
+            <button><img src="Albania.png" alt=""><div class="btn_op">B</div></button>
+            <button onclick="scorecount(1)"><img src="India.png" alt=""><div class="btn_op">C</div></button>
+            <button><img src="Korea-South.png" alt=""><div class="btn_op">D</div></button>
+        </div>
+        <div class="page7_btn">
+            <button onclick="changepage('page7','page8'); finalscore()">what's my score?</button>
+        </div>
+    </div>
+
+    <div class="page8" style="display: none;" id="page8">
+        <div class="image"><img src="win.png" alt="" width="600" height="400"></div>
+        <h3>You got <span id="scorevalue">0</span>/5 answer correct <span id="ch_name">Challenger</span>.</h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
